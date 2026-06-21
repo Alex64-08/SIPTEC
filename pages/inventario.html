@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIPTEC - Panel de Control</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome 6 para iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="../style/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- CAPA OSCURA DE FONDO (Solo visible en móviles cuando el menú está abierto) -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ==========================================
+       BARRA LATERAL (SIDEBAR)
+       ========================================== -->
+    <aside class="sidebar" id="sidebarMenu">
+        <div class="sidebar-logo">
+            <img src="../img/SIPTEC Logo Circular.png" alt="Logo SIPTEC">
+        </div>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav class="sidebar-menu">
+            <a href="../pages/panel de control.html" class="menu-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Panel de control</span>
+            </a>
+            <a href="../pages/inventario.html" class="menu-item active">
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Inventario</span>
+            </a>
+            <a href="../pages/prestamos.html" class="menu-item">
+                <i class="fa-solid fa-right-left"></i>
+                <span>Préstamos</span>
+            </a>
+            <a href="../pages/devoluciones.html" class="menu-item">
+                <i class="fa-solid fa-rotate-left"></i>
+                <span>Devoluciones</span>
+            </a>
+            <a href="../pages/usuarios.html" class="menu-item">
+                <i class="fa-solid fa-users"></i>
+                <span>Usuarios</span>
+            </a>
+            <a href="../pages/reportes.html" class="menu-item">
+                <i class="fa-solid fa-file-invoice"></i>
+                <span>Reportes</span>
+            </a>
+            <a href="../pages/historial.html" class="menu-item">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>Historial</span>
+            </a>
+            <a href="../pages/configuracion.html" class="menu-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Configuración</span>
+            </a>
+        </nav>
+    </aside>
+
+
+    <!-- ==========================================
+       CONTENEDOR PRINCIPAL (LADO DERECHO)
+       ========================================== -->
+    <div class="main-wrapper">
+
+        <!-- ==========================================
+           BARRA SUPERIOR (HEADER/NAVBAR)
+           ========================================== -->
+        <header class="top-navbar">
+            
+            <div class="d-flex align-items-center">
+                <!-- BOTÓN HAMBURGUESA (Visible solo en dispositivos móviles/tablets) -->
+                <button class="sidebar-toggle" id="menuToggle" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- BUSCADOR -->
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <!-- TODO: EDITAR EL MARCADOR DE POSICIÓN DEL BUSCADOR -->
+                    <input type="text" class="form-control search-input" placeholder="Busca implemento, usuario...">
+                </div>
+            </div>
+
+            <!-- ACCIONES DEL HEADER (DERECHA) -->
+            <div class="header-actions">
+                
+                <!-- Botón de Notificaciones -->
+                <button class="notification-btn" title="Notificaciones">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-badge-dot"></span>
+                </button>
+
+                <!-- Divisor visual -->
+                <div class="divider"></div>
+
+                <!-- Indicador de Fecha (Se oculta en celulares) -->
+                <!-- TODO: TEXTO DE FECHA -->
+                <div class="header-date">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <span>10 de mayo de 2026</span>
+                </div>
+
+                <!-- Divisor visual (Se oculta en celulares) -->
+                <div class="divider d-none d-md-block"></div>
+
+                <!-- Perfil de Usuario -->
+                <!-- TODO: TEXTO DE ROL/NOMBRE DE USUARIO -->
+                <div class="header-user">
+                    <i class="fa-regular fa-circle-user"></i>
+                    <strong><span>Administrador</span></strong>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- ==========================================
+        ESPACIO PARA EL CONTENIDO DE LA PÁGINA
+           ========================================== -->
+        <main class="content-container">
+            <div class="py-5 text-center text-muted">
+                <h3>Aquí va el cuerpo de la página</h3>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script del menú responsive -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const sidebarMenu = document.getElementById('sidebarMenu');
+            const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+            // Función para abrir/cerrar el menú en móviles
+            function toggleMenu() {
+                sidebarMenu.classList.toggle('show');
+                sidebarOverlay.classList.toggle('show');
+            }
+
+            // Al hacer clic en el botón de hamburguesa
+            if (menuToggle) {
+                menuToggle.addEventListener('click', toggleMenu);
+            }
+
+            // Al hacer clic fuera del menú (en la capa oscura de fondo)
+            if (sidebarOverlay) {
+                sidebarOverlay.addEventListener('click', toggleMenu);
+            }
+        });
+    </script>
+</body>
+</html>

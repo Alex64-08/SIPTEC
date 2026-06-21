@@ -1,0 +1,66 @@
+body {
+    /* TODO: AQUÍ SE COLOCA LA IMAGEN DE FONDO (image_1032a3.jpg) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('image_1032a3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-card {
+    background-color: #001f3d; /* Azul oscuro del fondo de la tarjeta */
+    border-radius: 15px;
+    max-width: 450px;
+    width: 100%;
+    padding: 2.5rem;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+.login-title {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+}
+.login-subtitle {
+    color: #a0b0c0;
+    font-size: 0.9rem;
+}
+.login-instruction {
+    color: #6c7a89;
+    font-size: 0.85rem;
+}
+.form-label {
+    color: #a0b0c0;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+.form-control {
+    background-color: #d9d9d9 !important; 
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+}
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(154, 198, 141, 0.5);
+}
+.btn-custom {
+    background-color: #9ac68d; 
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+.btn-custom:hover {
+    background-color: #88b57c;
+    color: #ffffff;
+}
+.login-footer {
+    color: #6c7a89;
+    font-size: 0.75rem;
+    line-height: 1.3;
+}
