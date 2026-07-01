@@ -1,6 +1,5 @@
 body {
-    /* TODO: AQUÍ SE COLOCA LA IMAGEN DE FONDO (image_1032a3.jpg) */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('image_1032a3.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/engineering-bg.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
